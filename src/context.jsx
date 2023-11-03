@@ -26,7 +26,7 @@ const week = [
 
 export const AppProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(getInitialDarkMode());
-  const [searchTerm, setSearchTerm] = useState(week[day]);
+  const [searchTerm, setSearchTerm] = useState('week[day]');
   const [page, setPage] = useState(1);
 
   const toggleDarkTheme = () => {

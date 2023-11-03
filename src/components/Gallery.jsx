@@ -2,17 +2,17 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { useGlobalContext } from '../context';
-import { keys } from '../../keys';
 import Image from './Image';
 
 import { GrLinkNext, GrLinkPrevious } from 'react-icons/gr';
 
 const url = `https://api.unsplash.com/search/photos?client_id=${
-  import.meta.env.VITE_API_KEY || keys.accessKey
+  import.meta.env.VITE_API_KEY
 }`;
 
 export const Gallery = () => {
   const { searchTerm, page, setPage } = useGlobalContext();
+  console.log(searchTerm);
 
   const response = useQuery({
     queryKey: ['images', searchTerm, page],

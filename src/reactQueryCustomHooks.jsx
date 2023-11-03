@@ -6,7 +6,7 @@ export const useFetchImages = () => {
     queryKey: ['images'],
     queryFn: async () => {
       const { data } = await customFetch.get(
-        `/?client_id=${import.meta.env.VITE_API_KEY}&query=office`
+        `/?client_id=${import.meta.env.VITE_API_KEY}&query=`
       );
       return { data, isLoading, isError, error };
     },
